@@ -1,9 +1,10 @@
 using System;
-using System.Reactive.Disposables;
+using Avalonia.Experimental.Data.Core;
+using Avalonia.Reactive;
 
 namespace Avalonia.Experimental.Data
 {
-    internal class ObservableEx
+    internal static class ObservableEx
     {
         public static IObservable<T> SingleValue<T>(T value)
         {
@@ -23,6 +24,12 @@ namespace Avalonia.Experimental.Data
                 observer.OnNext(_value);
                 return Disposable.Empty;
             }
+        }
+
+
+        public static IDisposable Subscribe<T>(this IObservable<T> observable, Action<T> onNext)
+        {
+            return observable.Subscribe(new AnonymousObserver<T>(onNext));
         }
     }
 }

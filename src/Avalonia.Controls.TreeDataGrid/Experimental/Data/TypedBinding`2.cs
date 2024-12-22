@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Reactive.Disposables;
 using Avalonia.Data;
 using Avalonia.Experimental.Data.Core;
-using Avalonia.Reactive;
-using Avalonia.VisualTree;
 
 #nullable enable
 

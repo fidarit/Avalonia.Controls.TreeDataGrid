@@ -1,15 +1,15 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Globalization;
-using System.Reactive.Subjects;
 using Avalonia.Data;
+using Avalonia.Experimental.Data;
 using Avalonia.Media;
 
 namespace Avalonia.Controls.Models.TreeDataGrid
 {
     public class TextCell<T> : NotifyingBase, ITextCell, IDisposable, IEditableObject
     {
-        private readonly ISubject<BindingValue<T>>? _binding;
+        private readonly IObserver<BindingValue<T>>? _binding;
         private readonly ITextCellOptions? _options;
         private readonly IDisposable? _subscription;
         private string? _editText;
@@ -23,15 +23,16 @@ namespace Avalonia.Controls.Models.TreeDataGrid
         }
 
         public TextCell(
-            ISubject<BindingValue<T>> binding,
+            IObserver<BindingValue<T>> bindingObserver,
+            IObservable<BindingValue<T>> bindingObservable,
             bool isReadOnly,
             ITextCellOptions? options = null)
         {
-            _binding = binding;
+            _binding = bindingObserver;
             IsReadOnly = isReadOnly;
             _options = options;
 
-            _subscription = binding.Subscribe(x =>
+            _subscription = bindingObservable.Subscribe(x =>
             {
                 if (x.HasValue)
                     Value = x.Value;

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Reactive.Subjects;
 using Avalonia.Data;
 using Avalonia.Utilities;
 
@@ -19,7 +18,7 @@ namespace Avalonia.Experimental.Data.Core
     /// instantiated on an object.
     /// </remarks>
     public class TypedBindingExpression<TIn, TOut> : LightweightObservableBase<BindingValue<TOut>>,
-        ISubject<BindingValue<TOut>>,
+        IObserver<BindingValue<TOut>>,
         IDescription
             where TIn : class
     {
