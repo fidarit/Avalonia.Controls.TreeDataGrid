@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Reactive.Subjects;
-using System.Reflection;
 using Avalonia.Data;
+using Avalonia.Experimental.Data;
 
 namespace Avalonia.Controls.Models.TreeDataGrid
 {
     public class CheckBoxCell : NotifyingBase, ICell, IDisposable
     {
-        private readonly ISubject<BindingValue<bool?>>? _binding;
+        private readonly IObserver<BindingValue<bool?>>? _binding;
         private readonly IDisposable? _subscription;
         private bool? _value;
 
@@ -18,15 +17,16 @@ namespace Avalonia.Controls.Models.TreeDataGrid
         }
 
         public CheckBoxCell(
-            ISubject<BindingValue<bool?>> binding,
+            IObserver<BindingValue<bool?>> bindingObserver,
+            IObservable<BindingValue<bool?>> bindingObservable,
             bool isReadOnly,
             bool isThreeState)
         {
-            _binding = binding;
+            _binding = bindingObserver;
             IsReadOnly = isReadOnly;
             IsThreeState = isThreeState;
 
-            _subscription = binding.Subscribe(x =>
+            _subscription = bindingObservable.Subscribe(x =>
             {
                 if (x.HasValue)
                     Value = x.Value;
