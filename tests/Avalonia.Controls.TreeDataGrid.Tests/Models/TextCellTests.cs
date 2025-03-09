@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Globalization;
 using System.Reactive.Subjects;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using Avalonia.Controls.Models.TreeDataGrid;
 using Avalonia.Data;
 using Avalonia.Headless.XUnit;
-using Avalonia.Media;
 using Xunit;
 
 namespace Avalonia.Controls.TreeDataGridTests.Models
@@ -98,6 +96,12 @@ namespace Avalonia.Controls.TreeDataGridTests.Models
 
         public class StringFormat
         {
+            public StringFormat()
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
+
+            }
+
             [AvaloniaFact(Timeout = 10000)]
             public void Initial_Int_Value_Is_Formatted()
             {
