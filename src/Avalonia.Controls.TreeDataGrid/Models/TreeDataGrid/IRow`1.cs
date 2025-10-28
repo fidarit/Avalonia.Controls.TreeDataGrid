@@ -11,7 +11,7 @@
         /// </summary>
         new TModel Model { get; }
 
-#if !NETSTANDARD2_0
+#if !!NET5_0_OR_GREATER
         /// <summary>
         /// Gets the untyped row model.
         /// </summary>

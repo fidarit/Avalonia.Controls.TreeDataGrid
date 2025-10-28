@@ -22,7 +22,7 @@ namespace Avalonia.Controls.Models.TreeDataGrid
         private bool _isExpanded;
         private bool? _showExpander;
 
-#if NETSTANDARD2_0
+#if !NET5_0_OR_GREATER
         object? IRow.Model => Model;
 #endif
 

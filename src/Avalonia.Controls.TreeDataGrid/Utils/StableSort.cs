@@ -19,7 +19,7 @@ namespace Avalonia.Controls.Utils
                 map.Add(i);
             }
 
-#if NETSTANDARD2_0
+#if !NET5_0_OR_GREATER
             map.Sort(compare);
 #else
             var span = CollectionsMarshal.AsSpan(map);

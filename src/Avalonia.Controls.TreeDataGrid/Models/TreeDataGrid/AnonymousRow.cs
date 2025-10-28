@@ -17,7 +17,7 @@ namespace Avalonia.Controls.Models.TreeDataGrid
         private int _modelIndex;
         [AllowNull] private TModel _model;
 
-#if NETSTANDARD2_0
+#if !NET5_0_OR_GREATER
         object? IRow.Model => _model;
 #endif
 
