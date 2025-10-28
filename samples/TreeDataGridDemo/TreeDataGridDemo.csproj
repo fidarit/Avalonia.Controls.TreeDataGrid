@@ -18,7 +18,7 @@
     <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaSamplesVersion)" />
     <PackageReference Include="Avalonia.Fonts.Inter" Version="$(AvaloniaSamplesVersion)" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaSamplesVersion)" />
-    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="Bogus" Version="35.6.5" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Avalonia.Controls.TreeDataGrid\Avalonia.Controls.TreeDataGrid.csproj" />

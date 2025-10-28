@@ -1,5 +1,16 @@
-[![NuGet](https://img.shields.io/nuget/v/Avalonia.Controls.TreeDataGrid.svg)](https://www.nuget.org/packages/Avalonia.Controls.TreeDataGrid/)
+﻿[![NuGet](https://img.shields.io/nuget/v/TreeDataGrid.Avalonia.svg)](https://www.nuget.org/packages/TreeDataGrid.Avalonia/)
 # Avalonia `TreeDataGrid`
+
+> [!IMPORTANT]  
+> # Important Notice: Community-Maintained Fork
+> 
+> This repository is a community-maintained fork of the last open-source version (v11.1.1) of the original [`TreeDataGrid`](https://github.com/AvaloniaUI/Avalonia.Controls.TreeDataGrid) control.
+> 
+> ## Why this fork exists  
+>
+> - The original repository has been archived by the maintainers.
+> - You still want to use or extend `TreeDataGrid` under the open MIT license and adapt it to your needs.
+> - This fork enables continued open-source development, maintenance, and community contributions.
 
 ## Introduction
 
@@ -18,14 +29,19 @@ An example of `TreeDataGrid` displaying flat data:
 
 ![TreeDataGrid in hierarchical mode](docs/images/countries.png)
 
-## Current Status
+## Getting Started 
 
-We accept issues and pull requests but we answer and review only pull requests and issues that are created by our customers. It's a quite big project and servicing all issues and pull requests will require more time than we have. But feel free to open issues and pull requests because they may be useful for us!
+- [Installation](docs/installation.md)  
+- [Creating a flat `TreeDataGrid`](docs/get-started-flat.md)  
+- [Creating a hierarchical `TreeDataGrid`](docs/get-started-hierarchical.md)  
+- [Supported column types](docs/column-types.md)  
+- [Selection](docs/selection.md)  
 
-## Getting Started
+## License  
+This project is licensed under the [MIT License](licence.md).  
+See the `LICENSE` file for details.  
+Original code © AvaloniaUI Contributors. Fork maintained by Fidarit Mullayanov.
 
-- [Installation](docs/installation.md)
-- [Creating a flat `TreeDataGrid`](docs/get-started-flat.md)
-- [Creating a hierarchical `TreeDataGrid`](docs/get-started-hierarchical.md)
-- [Supported column types](docs/column-types.md)
-- [Selection](docs/selection.md)
+## Acknowledgements  
+Thanks to the original maintainer(s) of `TreeDataGrid` and the Avalonia community for laying the groundwork.  
+Thanks to all contributors who will help maintain and evolve this fork.

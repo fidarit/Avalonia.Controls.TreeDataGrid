@@ -3,10 +3,15 @@
     <TargetFrameworks>netstandard2.0;net8.0;net48</TargetFrameworks>
     <IsPackable>True</IsPackable>
     <RootNamespace>Avalonia.Controls</RootNamespace>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Avalonia.Controls.TreeDataGrid</PackageId>
+    <PackageId>TreeDataGrid.Avalonia</PackageId>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\readme.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
   </ItemGroup>
@@ -15,7 +20,7 @@
     <PackageReference Include="Microsoft.Bcl.HashCode" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    <PackageReference Include="System.ValueTuple" Version="4.6.1" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
     <Compile Remove="StandardExtensions\**" />
