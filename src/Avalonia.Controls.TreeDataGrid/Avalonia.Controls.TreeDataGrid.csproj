@@ -4,13 +4,14 @@
     <IsPackable>True</IsPackable>
     <RootNamespace>Avalonia.Controls</RootNamespace>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>TreeDataGrid.Avalonia</PackageId>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\..\readme.md" Pack="true" PackagePath="\"/>
+    <None Include="..\..\readme.nuget.md" Pack="true" PackagePath="readme.md" Visible="false" />
+    <None Include="..\..\docs\images\icon.png" Pack="true" PackagePath="icon.png" Visible="false" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />

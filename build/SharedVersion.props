@@ -7,5 +7,8 @@
     <Company>AvaloniaUI</Company>
     <Description>TreeDataGrid is a control which displays hierarchical and tabular data together in a single view. It is a combination of a TreeView and DataGrid control.</Description>
     <RepositoryType>git</RepositoryType>
+    <PackageTags>avalonia, ui-components, datagrid, treeview, xaml, csharp, dotnet</PackageTags>
+    <PackageReleaseNotes>https://github.com/fidarit/TreeDataGrid.Avalonia/releases</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 </Project>

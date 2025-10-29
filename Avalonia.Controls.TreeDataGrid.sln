@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30621.155
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{00673DCE-6218-4BAC-9026-F9BA18D241AE}"
 EndProject
@@ -24,6 +24,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Props", "Props", "{0F5B5686
 	ProjectSection(SolutionItems) = preProject
 		build\SharedVersion.props = build\SharedVersion.props
 		build\SourceLink.props = build\SourceLink.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}"
+	ProjectSection(SolutionItems) = preProject
+		docs\column-types.md = docs\column-types.md
+		docs\get-started-flat.md = docs\get-started-flat.md
+		docs\get-started-hierarchical.md = docs\get-started-hierarchical.md
+		docs\installation.md = docs\installation.md
+		licence.md = licence.md
+		readme.md = readme.md
+		readme.nuget.md = readme.nuget.md
+		docs\selection.md = docs\selection.md
 	EndProjectSection
 EndProject
 Global
