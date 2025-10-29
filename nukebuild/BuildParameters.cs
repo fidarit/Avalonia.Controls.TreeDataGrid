@@ -71,7 +71,7 @@ public partial class Build
             SkipPreviewer = b.SkipPreviewer;
 
             // CONFIGURATION
-            MainRepo = "https://github.com/AvaloniaUI/Avalonia.Controls.TreeDataGrid";
+            MainRepo = "https://github.com/fidarit/TreeDataGrid.Avalonia";
             MasterBranch = "refs/heads/master";
             ReleaseBranchPrefix = "refs/heads/release/";
             ReleaseConfiguration = "Release";
