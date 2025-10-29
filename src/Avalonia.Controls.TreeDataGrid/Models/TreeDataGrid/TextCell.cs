@@ -93,8 +93,8 @@ namespace Avalonia.Controls.Models.TreeDataGrid
         {
             if (!_isEditing && !IsReadOnly)
             {
-                _isEditing = true;
                 _editText = Text;
+                _isEditing = true;
             }
         }
 

@@ -94,6 +94,19 @@ namespace Avalonia.Controls.TreeDataGridTests.Models
             Assert.Equal(new[] { "initial" }, result);
         }
 
+        [AvaloniaFact(Timeout = 10000)]
+        public void Unchanged_Value_Clears_On_CommitEdit_Without_Changes()
+        {
+            var binding = new BehaviorSubject<BindingValue<string>>("initial");
+            var target = new TextCell<string>(binding, binding, false);
+
+            target.BeginEdit();
+            target.EndEdit();
+
+            Assert.Equal("initial", target.Text);
+            Assert.Equal("initial", target.Value);
+        }
+
         public class StringFormat
         {
             public StringFormat()
